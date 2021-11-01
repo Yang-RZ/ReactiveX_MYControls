@@ -1,0 +1,20 @@
+﻿<Window x:Class="MYControls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MYControls"
+        xmlns:myctrls="clr-namespace:MYControls.Buttons"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Button x:Name="btnClickOnce" DockPanel.Dock="Top"
+                Height="30" Content="Click Once"
+                Command="{Binding TestCommand}" CommandParameter="TestOnce" />
+        <myctrls:ButtonWithLongPress x:Name="btnLongPress"
+                                     DockPanel.Dock="Top" Height="30"
+                                     Command="{Binding TestCommand}"
+                                     />
+        <ListBox ItemsSource="{Binding MessageList}" />
+    </DockPanel>
+</Window>
